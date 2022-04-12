@@ -56,7 +56,6 @@ Capstone-Project-Data-Engineering-Nanodegree
 |   | split_data.py       # Script to split large datasets
 |   | dwh.cfg             # Configuration file
 
-
 Requirements for running locally
 
 Install Python3
