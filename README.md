@@ -10,28 +10,39 @@ Due to a pandemic that started in January 2020, the Analytics Team wants to inge
 
 Project Structure
 
-Capstone-Project-Data-Engineering-Nanodegree
+
 │   README.md                    # Project description
+
 │   requirements.txt             # Python dependencies
+
 │   docker-compose.yml           # Docker Containers Configuration
+
 └───airflow                      # Airflow home
 |   |
 │   └───dags                       # Airflow DAGs location
+
 │   |   │ create_datalake_dag.py   # DAG definition
+
 │   |   │ us_accidents_etl_dag.py  # DAG definition
 |   |   |
 |   └───plugins
 │       │
 |       └───helpers
 |       |   | sql_creates.py  # Sql queries to create objects
+
 |       |   | sql_load.py     # Sql queries to load data into sql tables
 |       |
 |       └───operators
 |       |   | check_s3_file_count.py # CheckS3FileCount
+
 |       |   | create_s3_bucket.py    # CreateS3BucketOperator
+
 |       |   | upload_files_to_s3.py  # UploadFilesToS3Operator
+
 |       |   | data_quality.py        # DataQualityOperator
+
 |       |   | load_table.py          # LoadTableOperator
+
 |       |   | s3_to_redshift.py      # S3ToRedshiftOperator
 |___data-profiling
 │   | covid-19.html
@@ -40,20 +51,31 @@ Capstone-Project-Data-Engineering-Nanodegree
 |___data
 |   |
 │   └───raw                          # Raw data is saved here
+
 │   |   └─── covid-19                # Covid-19 data set directory
+
 │   |   └─── us-accidents            # us-accidents data set directory
+
 │   |   └─── us-cities-demographics  # us-cities-demographics data set directory
+
 │   └───split                        # Split data is saved here automatically (Directories are created automatically as well)
 |___images
 |   | datalake_dag_graph_view.png     # Datalake DAG Graph View
+
 |   | datalake_dag_trigger.png        # Datalake DAG Trigger
+
 |   | accident_elt_dag_graph_view.png # Accident ETL DAG Graph View
+
 |   | accident_elt_dag_trigger.png    # Accident ETL DAG Trigger
+
 |   | data-model.png                  # Redshift Entity Relationship Diagram
 |___src
 |   | create_resources.py # Script to create resources required
+
 |   | delete_resources.py # Script to delete resources created
+
 |   | split_data.py       # Script to split large datasets
+
 |   | dwh.cfg             # Configuration file
 
 Requirements for running locally
@@ -67,9 +89,11 @@ Install Docker Compose
 AWS Account
 
 Step 1: Scope the Project
+
 Scope
 
 The idea is to create a data lake and a DataWarehouse on AWS, enabling users to analyze accidents data and extract insights.
+
 The main goal of this project is to build an end-to-end data pipeline which is capable to work with big volumes of data.
 
 
